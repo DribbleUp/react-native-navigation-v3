@@ -222,7 +222,7 @@ public class StackController extends ParentController<StackLayout> {
 
     public void pop(Options mergeOptions, CommandListener listener) {
         if (!canPop()) {
-            listener.onError("Nothing to pop");
+            //listener.onError("Nothing to pop");
             return;
         }
 
@@ -257,7 +257,7 @@ public class StackController extends ParentController<StackLayout> {
 
     public void popTo(ViewController viewController, Options mergeOptions, CommandListener listener) {
         if (!stack.containsId(viewController.getId()) || peek().equals(viewController)) {
-            listener.onError("Nothing to pop");
+            //listener.onError("Nothing to pop");
             return;
         }
 
