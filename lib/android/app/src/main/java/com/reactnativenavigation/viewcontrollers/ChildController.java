@@ -31,7 +31,7 @@ public abstract class ChildController<T extends ViewGroup> extends ViewControlle
     public T getView() {
         if (view == null) {
             super.getView();
-            view.setFitsSystemWindows(true);
+            view.setFitsSystemWindows(false); // setting this to false makes Full Screen mode work for Android API 30
             ViewCompat.setOnApplyWindowInsetsListener(view, this::onApplyWindowInsets);
         }
         return view;
